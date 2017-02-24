@@ -1,0 +1,11 @@
+D:\工作台\Csharp\TagManager\TagManager\bin\Debug\TagManager.exe
+D:\工作台\Csharp\TagManager\TagManager\bin\Debug\TagManager.pdb
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.mainForm.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.Properties.Resources.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.csproj.GenerateResource.Cache
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.exe
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.pdb
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.inputForm.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.folderView.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.loadingForm.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.csprojResolveAssemblyReference.cache

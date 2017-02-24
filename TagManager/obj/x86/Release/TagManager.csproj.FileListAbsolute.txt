@@ -1,0 +1,16 @@
+D:\工作台\Csharp\TagManager\TagManager\bin\Release\TagManager.exe
+D:\工作台\Csharp\TagManager\TagManager\bin\Release\TagManager.pdb
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.folderView.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.mainForm.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.inputForm.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.loadingForm.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.Properties.Resources.resources
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.csproj.GenerateResource.Cache
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.exe
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.pdb
+D:\工作台\Csharp\TagManager\TagManager\bin\Release\TagManager.exe.config
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.TrustInfo.xml
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.exe.manifest
+D:\工作台\Csharp\TagManager\TagManager\bin\Release\TagManager.exe.manifest
+D:\工作台\Csharp\TagManager\TagManager\bin\Release\TagManager.application
+D:\工作台\Csharp\TagManager\TagManager\obj\x86\Release\TagManager.application
