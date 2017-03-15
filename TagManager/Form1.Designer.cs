@@ -44,10 +44,10 @@
             this.添加标签ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打开文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_setRootPath = new System.Windows.Forms.Button();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.btn_help = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
-            this.btn_refresh = new System.Windows.Forms.Button();
-            this.btn_setRootPath = new System.Windows.Forms.Button();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -68,25 +68,27 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
             this.splitContainer1.Panel1.Controls.Add(this.TagCountLabel);
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             this.splitContainer1.Panel1.Controls.Add(this.Tag_label);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
             this.splitContainer1.Panel2.Controls.Add(this.FolderCountLabel);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.Folder_label);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 632);
             this.splitContainer1.SplitterDistance = 222;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 1;
             // 
             // TagCountLabel
             // 
             this.TagCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.TagCountLabel.AutoSize = true;
+            this.TagCountLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.TagCountLabel.Location = new System.Drawing.Point(14, 606);
             this.TagCountLabel.Name = "TagCountLabel";
             this.TagCountLabel.Size = new System.Drawing.Size(89, 12);
@@ -107,9 +109,11 @@
             // 
             // Tag_listBox
             // 
-            this.Tag_listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(229)))), ((int)(((byte)(248)))));
+            this.Tag_listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Tag_listBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Tag_listBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tag_listBox.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Tag_listBox.ForeColor = System.Drawing.SystemColors.Info;
             this.Tag_listBox.FormattingEnabled = true;
             this.Tag_listBox.ItemHeight = 20;
             this.Tag_listBox.Location = new System.Drawing.Point(0, 0);
@@ -121,10 +125,11 @@
             // Tag_label
             // 
             this.Tag_label.AutoSize = true;
-            this.Tag_label.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Tag_label.Location = new System.Drawing.Point(12, 12);
+            this.Tag_label.Font = new System.Drawing.Font("华文中宋", 13F, System.Drawing.FontStyle.Bold);
+            this.Tag_label.ForeColor = System.Drawing.SystemColors.Info;
+            this.Tag_label.Location = new System.Drawing.Point(12, 6);
             this.Tag_label.Name = "Tag_label";
-            this.Tag_label.Size = new System.Drawing.Size(41, 19);
+            this.Tag_label.Size = new System.Drawing.Size(47, 20);
             this.Tag_label.TabIndex = 0;
             this.Tag_label.Text = "标签";
             // 
@@ -132,6 +137,7 @@
             // 
             this.FolderCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FolderCountLabel.AutoSize = true;
+            this.FolderCountLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.FolderCountLabel.Location = new System.Drawing.Point(16, 606);
             this.FolderCountLabel.Name = "FolderCountLabel";
             this.FolderCountLabel.Size = new System.Drawing.Size(53, 12);
@@ -147,20 +153,22 @@
             this.panel1.Controls.Add(this.Folder_listBox);
             this.panel1.Location = new System.Drawing.Point(18, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 563);
+            this.panel1.Size = new System.Drawing.Size(743, 563);
             this.panel1.TabIndex = 2;
             // 
             // Folder_listBox
             // 
-            this.Folder_listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(229)))), ((int)(((byte)(248)))));
+            this.Folder_listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Folder_listBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Folder_listBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Folder_listBox.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.Folder_listBox.ForeColor = System.Drawing.SystemColors.Info;
             this.Folder_listBox.FormattingEnabled = true;
             this.Folder_listBox.HorizontalScrollbar = true;
             this.Folder_listBox.ItemHeight = 20;
             this.Folder_listBox.Location = new System.Drawing.Point(0, 0);
             this.Folder_listBox.Name = "Folder_listBox";
-            this.Folder_listBox.Size = new System.Drawing.Size(741, 563);
+            this.Folder_listBox.Size = new System.Drawing.Size(743, 563);
             this.Folder_listBox.TabIndex = 2;
             this.Folder_listBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Folder_listBox_MouseDoubleClick);
             this.Folder_listBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Folder_listBox_MouseDown);
@@ -168,10 +176,12 @@
             // Folder_label
             // 
             this.Folder_label.AutoSize = true;
-            this.Folder_label.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Folder_label.Location = new System.Drawing.Point(14, 12);
+            this.Folder_label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Folder_label.Font = new System.Drawing.Font("华文中宋", 13F, System.Drawing.FontStyle.Bold);
+            this.Folder_label.ForeColor = System.Drawing.SystemColors.Info;
+            this.Folder_label.Location = new System.Drawing.Point(14, 6);
             this.Folder_label.Name = "Folder_label";
-            this.Folder_label.Size = new System.Drawing.Size(57, 19);
+            this.Folder_label.Size = new System.Drawing.Size(66, 20);
             this.Folder_label.TabIndex = 0;
             this.Folder_label.Text = "文件夹";
             // 
@@ -207,23 +217,55 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btn_setRootPath);
+            this.panel3.Controls.Add(this.btn_refresh);
             this.panel3.Controls.Add(this.btn_help);
             this.panel3.Controls.Add(this.btn_search);
-            this.panel3.Controls.Add(this.btn_refresh);
-            this.panel3.Controls.Add(this.btn_setRootPath);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.MaximumSize = new System.Drawing.Size(0, 30);
-            this.panel3.MinimumSize = new System.Drawing.Size(0, 30);
+            this.panel3.MaximumSize = new System.Drawing.Size(9999, 32);
+            this.panel3.MinimumSize = new System.Drawing.Size(0, 32);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1008, 30);
+            this.panel3.Size = new System.Drawing.Size(1008, 32);
             this.panel3.TabIndex = 2;
+            // 
+            // btn_setRootPath
+            // 
+            this.btn_setRootPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
+            this.btn_setRootPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_setRootPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_setRootPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_setRootPath.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_setRootPath.Location = new System.Drawing.Point(15, 0);
+            this.btn_setRootPath.Name = "btn_setRootPath";
+            this.btn_setRootPath.Size = new System.Drawing.Size(79, 27);
+            this.btn_setRootPath.TabIndex = 4;
+            this.btn_setRootPath.Text = "   选择目录";
+            this.btn_setRootPath.UseVisualStyleBackColor = false;
+            this.btn_setRootPath.Click += new System.EventHandler(this.btn_setRootPath_Click);
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
+            this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_refresh.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_refresh.Location = new System.Drawing.Point(99, 0);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(79, 27);
+            this.btn_refresh.TabIndex = 5;
+            this.btn_refresh.Text = "   刷新目录";
+            this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // btn_help
             // 
-            this.btn_help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(192)))), ((int)(((byte)(211)))));
-            this.btn_help.Location = new System.Drawing.Point(271, 3);
+            this.btn_help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
+            this.btn_help.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_help.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_help.Location = new System.Drawing.Point(267, 0);
             this.btn_help.Name = "btn_help";
             this.btn_help.Size = new System.Drawing.Size(79, 27);
             this.btn_help.TabIndex = 7;
@@ -233,51 +275,32 @@
             // 
             // btn_search
             // 
-            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(192)))), ((int)(((byte)(211)))));
-            this.btn_search.Location = new System.Drawing.Point(186, 3);
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_search.Location = new System.Drawing.Point(183, 0);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(79, 27);
             this.btn_search.TabIndex = 6;
             this.btn_search.Text = "   搜索";
             this.btn_search.UseVisualStyleBackColor = false;
             // 
-            // btn_refresh
-            // 
-            this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(192)))), ((int)(((byte)(211)))));
-            this.btn_refresh.Location = new System.Drawing.Point(101, 3);
-            this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(79, 27);
-            this.btn_refresh.TabIndex = 5;
-            this.btn_refresh.Text = "   刷新目录";
-            this.btn_refresh.UseVisualStyleBackColor = false;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
-            // 
-            // btn_setRootPath
-            // 
-            this.btn_setRootPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(192)))), ((int)(((byte)(211)))));
-            this.btn_setRootPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_setRootPath.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_setRootPath.Location = new System.Drawing.Point(16, 3);
-            this.btn_setRootPath.Name = "btn_setRootPath";
-            this.btn_setRootPath.Size = new System.Drawing.Size(79, 27);
-            this.btn_setRootPath.TabIndex = 4;
-            this.btn_setRootPath.Text = "   选择目录";
-            this.btn_setRootPath.UseVisualStyleBackColor = false;
-            this.btn_setRootPath.Click += new System.EventHandler(this.btn_setRootPath_Click);
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1008, 661);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TagManager";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainForm_FormClosed);
+            this.Load += new System.EventHandler(this.mainForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -288,6 +311,7 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

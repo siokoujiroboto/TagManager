@@ -236,5 +236,10 @@ namespace TagManager
 
             System.Environment.Exit(0);
         }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

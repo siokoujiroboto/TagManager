@@ -38,14 +38,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TagManager.exe" size="113048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TagManager.exe" size="115096">
       <assemblyIdentity name="TagManager" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sEHVj4hYphHn1rE9JtaydiTnSg0=</dsig:DigestValue>
+        <dsig:DigestValue>NOaGRqxPqjBFsEClBm3C5K5KZsg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

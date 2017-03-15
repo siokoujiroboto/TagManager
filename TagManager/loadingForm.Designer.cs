@@ -39,6 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(207, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 21);
@@ -47,7 +48,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TagManager.Properties.Resources._20140623163805109;
+            this.pictureBox1.BackgroundImage = global::TagManager.Properties.Resources._20140623163805109;
             this.pictureBox1.Location = new System.Drawing.Point(176, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 178);
@@ -64,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(534, 261);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
