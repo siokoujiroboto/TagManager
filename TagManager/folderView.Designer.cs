@@ -42,18 +42,19 @@
             this.label_fileCount = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除此标签ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_openPath = new System.Windows.Forms.Button();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thumbPicture)).BeginInit();
             this.panel3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -68,7 +69,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
             // 
             // splitContainer1.Panel2
             // 
@@ -84,10 +85,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.thumbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thumbPicture.Location = new System.Drawing.Point(109, 0);
+            this.thumbPicture.Location = new System.Drawing.Point(116, 2);
             this.thumbPicture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.thumbPicture.Name = "thumbPicture";
-            this.thumbPicture.Size = new System.Drawing.Size(230, 206);
+            this.thumbPicture.Size = new System.Drawing.Size(213, 206);
             this.thumbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.thumbPicture.TabIndex = 0;
             this.thumbPicture.TabStop = false;
@@ -99,9 +100,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tag_listView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.tag_listView.ForeColor = System.Drawing.SystemColors.Info;
-            this.tag_listView.Location = new System.Drawing.Point(59, 33);
+            this.tag_listView.Location = new System.Drawing.Point(39, 29);
             this.tag_listView.Name = "tag_listView";
-            this.tag_listView.Size = new System.Drawing.Size(511, 141);
+            this.tag_listView.Size = new System.Drawing.Size(546, 145);
             this.tag_listView.TabIndex = 0;
             this.tag_listView.UseCompatibleStateImageBehavior = false;
             this.tag_listView.View = System.Windows.Forms.View.SmallIcon;
@@ -109,11 +110,12 @@
             // 
             // btn_addTag
             // 
+            this.btn_addTag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_addTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
             this.btn_addTag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_addTag.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_addTag.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_addTag.Location = new System.Drawing.Point(487, 172);
+            this.btn_addTag.Location = new System.Drawing.Point(381, 0);
             this.btn_addTag.Name = "btn_addTag";
             this.btn_addTag.Size = new System.Drawing.Size(83, 25);
             this.btn_addTag.TabIndex = 1;
@@ -133,6 +135,7 @@
             // 
             // pageSelect
             // 
+            this.pageSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pageSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(192)))), ((int)(((byte)(211)))));
             this.pageSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.pageSelect.Font = new System.Drawing.Font("新宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -146,6 +149,7 @@
             // 
             // btn_nextPage
             // 
+            this.btn_nextPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_nextPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
             this.btn_nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_nextPage.Font = new System.Drawing.Font("新宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -160,6 +164,7 @@
             // 
             // btn_previousPage
             // 
+            this.btn_previousPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_previousPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
             this.btn_previousPage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_previousPage.Font = new System.Drawing.Font("新宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -184,7 +189,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 581);
             this.panel3.MaximumSize = new System.Drawing.Size(9999, 30);
-            this.panel3.MinimumSize = new System.Drawing.Size(0, 30);
+            this.panel3.MinimumSize = new System.Drawing.Size(2, 30);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1008, 30);
             this.panel3.TabIndex = 1;
@@ -225,45 +230,51 @@
             this.删除此标签ToolStripMenuItem.Text = "删除此标签";
             this.删除此标签ToolStripMenuItem.Click += new System.EventHandler(this.删除此标签ToolStripMenuItem_Click);
             // 
-            // tableLayoutPanel1
+            // splitContainer2
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.18143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.81857F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 212);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
+            this.splitContainer2.Panel1.Controls.Add(this.thumbPicture);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
+            this.splitContainer2.Panel2.Controls.Add(this.panel1);
+            this.splitContainer2.Panel2.Controls.Add(this.tag_listView);
+            this.splitContainer2.Size = new System.Drawing.Size(1008, 212);
+            this.splitContainer2.SplitterDistance = 369;
+            this.splitContainer2.SplitterWidth = 2;
+            this.splitContainer2.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
-            this.panel1.Controls.Add(this.thumbPicture);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Controls.Add(this.btn_openPath);
+            this.panel1.Controls.Add(this.btn_addTag);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 176);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(356, 206);
+            this.panel1.Size = new System.Drawing.Size(637, 36);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btn_openPath
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
-            this.panel2.Controls.Add(this.tag_listView);
-            this.panel2.Controls.Add(this.btn_addTag);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(368, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(636, 206);
-            this.panel2.TabIndex = 1;
+            this.btn_openPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_openPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
+            this.btn_openPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_openPath.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_openPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_openPath.Location = new System.Drawing.Point(470, 0);
+            this.btn_openPath.Name = "btn_openPath";
+            this.btn_openPath.Size = new System.Drawing.Size(115, 25);
+            this.btn_openPath.TabIndex = 2;
+            this.btn_openPath.Text = "打开所在文件夹";
+            this.btn_openPath.UseVisualStyleBackColor = false;
+            this.btn_openPath.Click += new System.EventHandler(this.btn_openPath_Click);
             // 
             // folderView
             // 
@@ -288,9 +299,10 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -310,8 +322,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 删除此标签ToolStripMenuItem;
         private System.Windows.Forms.ListView tag_listView;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_openPath;
     }
 }

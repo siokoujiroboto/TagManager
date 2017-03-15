@@ -292,6 +292,11 @@ namespace TagManager
             folder.tagDel(str);
             taglistview_refresh();
         }
-        
+
+        private void btn_openPath_Click(object sender, EventArgs e)
+        {
+            string pathStr = folder.path + "\\" + folder.folderName;
+            System.Diagnostics.Process.Start("explorer.exe", pathStr);
+        }
     }
 }
