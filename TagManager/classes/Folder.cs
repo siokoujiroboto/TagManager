@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Collections;
 using System.IO;
 using System.Security.AccessControl;
@@ -15,7 +12,7 @@ namespace TagManager
     public class Folder
     {
         public String folderName;//文件夹名称
-        public String path;//该文件夹的路径
+        public String path;//该文件夹的路径*不包括文件夹名称
         public ArrayList tagArray = new ArrayList();//存放文件夹标签的数组
 
         public Folder() { }//无参数构造函数
@@ -28,7 +25,7 @@ namespace TagManager
                 tagArray.Add("没有标签");
         }
  
-        //获取该文件夹下的tag
+        //获取该文件夹下的tag并放入tagArray数组
         public void getTag()
         {
             try

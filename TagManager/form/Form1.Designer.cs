@@ -227,7 +227,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.MaximumSize = new System.Drawing.Size(9999, 32);
-            this.panel3.MinimumSize = new System.Drawing.Size(0, 32);
+            this.panel3.MinimumSize = new System.Drawing.Size(2, 32);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1008, 32);
             this.panel3.TabIndex = 2;

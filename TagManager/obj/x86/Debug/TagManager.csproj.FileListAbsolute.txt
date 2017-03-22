@@ -14,7 +14,6 @@ D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\bin\Debug\TagManage
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\bin\Debug\TagManager.application
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\bin\Debug\TagManager.exe
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\bin\Debug\TagManager.pdb
-D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.csprojResolveAssemblyReference.cache
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.folderView.resources
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.mainForm.resources
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.inputForm.resources
@@ -26,3 +25,6 @@ D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagMa
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.application
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.exe
 D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.pdb
+D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\bin\Debug\System.Data.SQLite.dll
+D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.csprojResolveAssemblyReference.cache
+D:\workspace\工作台（旧）\Csharp\TagManager\TagManager\obj\x86\Debug\TagManager.form.imgForm.resources

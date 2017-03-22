@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using System.IO;
 using System.Security.AccessControl;
+using System.Data.SQLite;
+
+using TagManager.classes;
+
 //----------------------------------------------------------
 //程序的主窗口及入口
 //主要负责遍历选择的根目录及制作对应的tagArray和FolderArray
@@ -20,6 +19,8 @@ namespace TagManager
     {
         public ArrayList FolderArray = new ArrayList();
         public ArrayList tagArray = new ArrayList();
+
+        //private SQLite_sheets coreDB = new SQLite_sheets();
 
         private String path = "";
         public mainForm()
@@ -35,9 +36,19 @@ namespace TagManager
             openFile.Dispose();
             if (path.Length==0)
                 return;
+
+            FileStream fs = new FileStream("tagManager.cfg", FileMode.OpenOrCreate, FileAccess.ReadWrite); //可以指定盘符，也可以指定任意文件名，还可以为word等文件
+            StreamWriter sw = new StreamWriter(fs); // 创建写入流
+            sw.WriteLine(path); // 写入Hello World
+            sw.Close(); //关闭文件
+
+            openPath(path);
+        }
+        
+        private void openPath(String path) {         
+            loadingForm l = new loadingForm();
             try
             {
-                loadingForm l = new loadingForm();
                 l.Show();
                 Application.DoEvents();
 
@@ -48,7 +59,7 @@ namespace TagManager
                 l.Close();
                 l.Dispose();
             }
-            catch (Exception ex) { }
+            catch (UnauthorizedAccessException ex) { MessageBox.Show("请以管理员身份运行"); l.Close(); }
         }
         //显示一个消息框，要求输入一个字符串作为标签
         private void 添加标签ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -239,7 +250,11 @@ namespace TagManager
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-
+            if (File.Exists(Environment.CurrentDirectory + "\\tagManager.cfg")) {
+                string[] lines = System.IO.File.ReadAllLines(Environment.CurrentDirectory + "\\tagManager.cfg");
+                openPath(lines[0]);
+            }
+           ;
         }
     }
 }

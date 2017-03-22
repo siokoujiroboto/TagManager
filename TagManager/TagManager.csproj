@@ -75,10 +75,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -89,23 +91,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Folder.cs" />
-    <Compile Include="folderView.cs">
+    <Compile Include="classes\Folder.cs" />
+    <Compile Include="classes\SQLite_sheets.cs" />
+    <Compile Include="form\folderView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="folderView.Designer.cs">
+    <Compile Include="form\folderView.Designer.cs">
       <DependentUpon>folderView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="form\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="form\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="inputForm.cs">
+    <Compile Include="form\imgForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inputForm.Designer.cs">
+    <Compile Include="form\imgForm.Designer.cs">
+      <DependentUpon>imgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\inputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\inputForm.Designer.cs">
       <DependentUpon>inputForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Installer1.cs">
@@ -114,25 +123,28 @@
     <Compile Include="Installer1.Designer.cs">
       <DependentUpon>Installer1.cs</DependentUpon>
     </Compile>
-    <Compile Include="loadingForm.cs">
+    <Compile Include="form\loadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loadingForm.Designer.cs">
+    <Compile Include="form\loadingForm.Designer.cs">
       <DependentUpon>loadingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tag.cs" />
-    <EmbeddedResource Include="folderView.resx">
+    <Compile Include="classes\Tag.cs" />
+    <EmbeddedResource Include="form\folderView.resx">
       <DependentUpon>folderView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="inputForm.resx">
+    <EmbeddedResource Include="form\imgForm.resx">
+      <DependentUpon>imgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\inputForm.resx">
       <DependentUpon>inputForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loadingForm.resx">
+    <EmbeddedResource Include="form\loadingForm.resx">
       <DependentUpon>loadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -179,15 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\20140623163805109.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tagIco.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tagico.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="www.ico.la_b554486e98f158ad69df6489de5b00ae_256x256.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

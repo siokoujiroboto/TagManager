@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Collections;
@@ -27,10 +22,10 @@ namespace TagManager
 
         //------------------------------
         //制作略缩图要使用的变量
-        private string ErrMessage;
-        private Image ResourceImage;
-        private int ImageWidth;
-        private int ImageHeight;
+        //private string ErrMessage;
+        //private Image ResourceImage;
+        //private int ImageWidth;
+        //private int ImageHeight;
         //------------------------------
         public folderView()
         {
@@ -44,9 +39,9 @@ namespace TagManager
         {            
             this.Text = folder.folderName;
             DirectoryInfo dir = new DirectoryInfo(folder.path + "\\" + folder.folderName);
-            FileInfo[] tag = dir.GetFiles();
+            FileInfo[] file = dir.GetFiles();
             //只提取png，bmp和jpg文件，制作成imglist
-            foreach (FileInfo nextFile in tag){
+            foreach (FileInfo nextFile in file){
                 if (nextFile.Extension.Equals(".jpg") || nextFile.Extension.Equals(".png") || nextFile.Extension.Equals(".bmp")){
                     imglist.Add(nextFile.FullName);
                 }
@@ -56,7 +51,7 @@ namespace TagManager
             if (imglist.Count == 0) {
                 return;
             } 
-            showFirstImage(tag);//调用函数显示第一张图片            
+            showFirstImage(file);//调用函数显示第一张图片            
             //设置该文件夹下最大的页数
             if (imglist.Count % maxshow == 0)
                 maxPage = imglist.Count / maxshow;
@@ -156,17 +151,28 @@ namespace TagManager
                     //pBox.Image = im;
                     //------------------------------------------------------------
                     pBox.Load(imglist[count].ToString());
+                    pBox.Tag = count;
+                    pBox.Cursor = System.Windows.Forms.Cursors.Hand;
                     pBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
                     pBox.Dock = System.Windows.Forms.DockStyle.Fill;
+                    pBox.Click += new System.EventHandler(tab_Click);
                     tabPanel.Controls.Add(pBox, c, r);
                     count++;
                 }                
             }
+            
 
             l.Close();
             l.Dispose();
 
             System.GC.Collect();
+        }
+        //tablayout中的图片的点击事件
+        private void tab_Click(object sender, EventArgs e) {
+            TagManager.form.imgForm imgform = new form.imgForm(imglist,
+                this.Text.ToString(),
+                Convert.ToInt32( (sender as PictureBox).Tag.ToString() ));
+            imgform.ShowDialog();
         }
         //上一页按钮的点击事件
         private void btn_previousPage_Click(object sender, EventArgs e)
@@ -230,60 +236,60 @@ namespace TagManager
         }
         
         #region 略缩图制作方法
-        /// <summary>   
-        /// 生成缩略图重载方法1，返回缩略图的Image对象   
-        /// </summary>   
-        /// <param name="width">缩略图的宽度   
-        /// <param name="height">缩略图的高度   
-        /// <returns>缩略图的Image对象</returns>   
-        public Image GetReducedImage(int Width, int Height)
-        {
-            try
-            {
-                Image ReducedImage;
+        ///// <summary>   
+        ///// 生成缩略图重载方法1，返回缩略图的Image对象   
+        ///// </summary>   
+        ///// <param name="width">缩略图的宽度   
+        ///// <param name="height">缩略图的高度   
+        ///// <returns>缩略图的Image对象</returns>   
+        //public Image GetReducedImage(int Width, int Height)
+        //{
+        //    try
+        //    {
+        //        Image ReducedImage;
 
-                Image.GetThumbnailImageAbort callb = new Image.GetThumbnailImageAbort(ThumbnailCallback);
+        //        Image.GetThumbnailImageAbort callb = new Image.GetThumbnailImageAbort(ThumbnailCallback);
 
-                ReducedImage = ResourceImage.GetThumbnailImage(Width, Height, callb, IntPtr.Zero);
+        //        ReducedImage = ResourceImage.GetThumbnailImage(Width, Height, callb, IntPtr.Zero);
 
-                return ReducedImage;
-            }
-            catch (Exception e)
-            {
-                ErrMessage = e.Message;
-                return null;
-            }
-        }
-        /// <summary>   
-        /// 生成缩略图重载方法3，返回缩略图的Image对象   
-        /// </summary>   
-        /// <param name="percent">缩略图的宽度百分比 如：需要百分之80，就填0.8     
-        /// <returns>缩略图的Image对象</returns>   
-        public Image GetReducedImage(double Percent)
-        {
-            try
-            {
-                Image ReducedImage;
+        //        return ReducedImage;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        ErrMessage = e.Message;
+        //        return null;
+        //    }
+        //}
+        ///// <summary>   
+        ///// 生成缩略图重载方法3，返回缩略图的Image对象   
+        ///// </summary>   
+        ///// <param name="percent">缩略图的宽度百分比 如：需要百分之80，就填0.8     
+        ///// <returns>缩略图的Image对象</returns>   
+        //public Image GetReducedImage(double Percent)
+        //{
+        //    try
+        //    {
+        //        Image ReducedImage;
 
-                Image.GetThumbnailImageAbort callb = new Image.GetThumbnailImageAbort(ThumbnailCallback);
+        //        Image.GetThumbnailImageAbort callb = new Image.GetThumbnailImageAbort(ThumbnailCallback);
 
-                ImageWidth = Convert.ToInt32(ResourceImage.Width * Percent);
-                ImageHeight = Convert.ToInt32(ResourceImage.Width * Percent);
+        //        ImageWidth = Convert.ToInt32(ResourceImage.Width * Percent);
+        //        ImageHeight = Convert.ToInt32(ResourceImage.Width * Percent);
 
-                ReducedImage = ResourceImage.GetThumbnailImage(ImageWidth, ImageHeight, callb, IntPtr.Zero);
+        //        ReducedImage = ResourceImage.GetThumbnailImage(ImageWidth, ImageHeight, callb, IntPtr.Zero);
 
-                return ReducedImage;
-            }
-            catch (Exception e)
-            {
-                ErrMessage = e.Message;
-                return null;
-            }
-        }
-        public bool ThumbnailCallback()
-        {
-            return false;
-        }
+        //        return ReducedImage;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        ErrMessage = e.Message;
+        //        return null;
+        //    }
+        //}
+        //public bool ThumbnailCallback()
+        //{
+        //    return false;
+        //}
         #endregion 
 
         private void 删除此标签ToolStripMenuItem_Click(object sender, EventArgs e)

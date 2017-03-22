@@ -30,9 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.thumbPicture = new System.Windows.Forms.PictureBox();
-            this.tag_listView = new System.Windows.Forms.ListView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_openPath = new System.Windows.Forms.Button();
             this.btn_addTag = new System.Windows.Forms.Button();
+            this.tag_listView = new System.Windows.Forms.ListView();
             this.filepanel = new System.Windows.Forms.Panel();
             this.pageSelect = new System.Windows.Forms.ComboBox();
             this.btn_nextPage = new System.Windows.Forms.Button();
@@ -42,19 +45,16 @@
             this.label_fileCount = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除此标签ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_openPath = new System.Windows.Forms.Button();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbPicture)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbPicture)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -79,34 +79,66 @@
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 0;
             // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
+            this.splitContainer2.Panel1.Controls.Add(this.thumbPicture);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
+            this.splitContainer2.Panel2.Controls.Add(this.panel1);
+            this.splitContainer2.Panel2.Controls.Add(this.tag_listView);
+            this.splitContainer2.Size = new System.Drawing.Size(1008, 212);
+            this.splitContainer2.SplitterDistance = 369;
+            this.splitContainer2.SplitterWidth = 2;
+            this.splitContainer2.TabIndex = 0;
+            // 
             // thumbPicture
             // 
             this.thumbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.thumbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thumbPicture.Location = new System.Drawing.Point(116, 2);
+            this.thumbPicture.Cursor = System.Windows.Forms.Cursors.Default;
+            this.thumbPicture.Location = new System.Drawing.Point(94, 2);
             this.thumbPicture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.thumbPicture.Name = "thumbPicture";
-            this.thumbPicture.Size = new System.Drawing.Size(213, 206);
+            this.thumbPicture.Size = new System.Drawing.Size(252, 206);
             this.thumbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.thumbPicture.TabIndex = 0;
             this.thumbPicture.TabStop = false;
             // 
-            // tag_listView
+            // panel1
             // 
-            this.tag_listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tag_listView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.tag_listView.ForeColor = System.Drawing.SystemColors.Info;
-            this.tag_listView.Location = new System.Drawing.Point(39, 29);
-            this.tag_listView.Name = "tag_listView";
-            this.tag_listView.Size = new System.Drawing.Size(546, 145);
-            this.tag_listView.TabIndex = 0;
-            this.tag_listView.UseCompatibleStateImageBehavior = false;
-            this.tag_listView.View = System.Windows.Forms.View.SmallIcon;
-            this.tag_listView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tag_listView_MouseDown);
+            this.panel1.Controls.Add(this.btn_openPath);
+            this.panel1.Controls.Add(this.btn_addTag);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 176);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(637, 36);
+            this.panel1.TabIndex = 0;
+            // 
+            // btn_openPath
+            // 
+            this.btn_openPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_openPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
+            this.btn_openPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_openPath.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_openPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_openPath.Location = new System.Drawing.Point(470, 0);
+            this.btn_openPath.Name = "btn_openPath";
+            this.btn_openPath.Size = new System.Drawing.Size(115, 25);
+            this.btn_openPath.TabIndex = 2;
+            this.btn_openPath.Text = "打开所在文件夹";
+            this.btn_openPath.UseVisualStyleBackColor = false;
+            this.btn_openPath.Click += new System.EventHandler(this.btn_openPath_Click);
             // 
             // btn_addTag
             // 
@@ -122,6 +154,21 @@
             this.btn_addTag.Text = "增加标签";
             this.btn_addTag.UseVisualStyleBackColor = false;
             this.btn_addTag.Click += new System.EventHandler(this.btn_addTag_Click);
+            // 
+            // tag_listView
+            // 
+            this.tag_listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tag_listView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.tag_listView.ForeColor = System.Drawing.SystemColors.Info;
+            this.tag_listView.Location = new System.Drawing.Point(39, 29);
+            this.tag_listView.Name = "tag_listView";
+            this.tag_listView.Size = new System.Drawing.Size(546, 145);
+            this.tag_listView.TabIndex = 0;
+            this.tag_listView.UseCompatibleStateImageBehavior = false;
+            this.tag_listView.View = System.Windows.Forms.View.SmallIcon;
+            this.tag_listView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tag_listView_MouseDown);
             // 
             // filepanel
             // 
@@ -230,52 +277,6 @@
             this.删除此标签ToolStripMenuItem.Text = "删除此标签";
             this.删除此标签ToolStripMenuItem.Click += new System.EventHandler(this.删除此标签ToolStripMenuItem_Click);
             // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
-            this.splitContainer2.Panel1.Controls.Add(this.thumbPicture);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
-            this.splitContainer2.Panel2.Controls.Add(this.panel1);
-            this.splitContainer2.Panel2.Controls.Add(this.tag_listView);
-            this.splitContainer2.Size = new System.Drawing.Size(1008, 212);
-            this.splitContainer2.SplitterDistance = 369;
-            this.splitContainer2.SplitterWidth = 2;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btn_openPath);
-            this.panel1.Controls.Add(this.btn_addTag);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 176);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 36);
-            this.panel1.TabIndex = 0;
-            // 
-            // btn_openPath
-            // 
-            this.btn_openPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_openPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
-            this.btn_openPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_openPath.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_openPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_openPath.Location = new System.Drawing.Point(470, 0);
-            this.btn_openPath.Name = "btn_openPath";
-            this.btn_openPath.Size = new System.Drawing.Size(115, 25);
-            this.btn_openPath.TabIndex = 2;
-            this.btn_openPath.Text = "打开所在文件夹";
-            this.btn_openPath.UseVisualStyleBackColor = false;
-            this.btn_openPath.Click += new System.EventHandler(this.btn_openPath_Click);
-            // 
             // folderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
@@ -295,14 +296,14 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.thumbPicture)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.thumbPicture)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
